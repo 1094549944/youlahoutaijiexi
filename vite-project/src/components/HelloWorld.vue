@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-
+import variables from "@/styles/variables.module.scss";
 defineProps<{ msg: string }>();
 
 const count = ref(0);
@@ -21,11 +21,22 @@ const count = ref(0);
     <hr />
     <svg-icon icon-class="refresh" spin />
     刷新
+    <hr />
+    <div class="test-css">测试是否引入了颜色</div>
+    <hr />
+    <div :style="{ 'background-color': variables['bgColor'] }">
+      测试全局使用
+    </div>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .read-the-docs {
   color: #888;
+}
+.test-css {
+  width: 100px;
+  height: 100px;
+  background-color: $bg-color;
 }
 </style>
