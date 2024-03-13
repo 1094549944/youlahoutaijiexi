@@ -9,6 +9,9 @@ import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
+// 引入svg
+import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
+
 // 引入路径
 import { resolve } from "path";
 
@@ -53,7 +56,14 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         ],
         dts: resolve(pathSrc, "typings", "components.d.ts"), //  自动导入组件类型声明文件位置，默认根目录
       }),
-      ,
+      // 通过 createSvgIconsPlugin() 入参指定了svg 文件所在的目录和 symbolId。
+      createSvgIconsPlugin({
+        // Specify the icon folder to be cached
+        iconDirs: [resolve(process.cwd(), "src/assets/icons")],
+        // Specify symbolId format
+        // symbolId
+        symbolId: "icon-[dir]-[name]",
+      }),
     ],
   };
 });
