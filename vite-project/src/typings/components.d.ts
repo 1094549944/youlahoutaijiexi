@@ -5,11 +5,11 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 export {}
 
-declare module 'vue' {
+declare module "vue" {
   export interface GlobalComponents {
-    ElButton: typeof import('element-plus/es')['ElButton']
-    ElIcon: typeof import('element-plus/es')['ElIcon']
-    HelloWorld: typeof import('./../components/HelloWorld.vue')['default']
-    SvgIcon: typeof import('./../components/SvgIcon/index.vue')['default']
+    ElButton: (typeof import("element-plus/es"))["ElButton"];
+    ElIcon: (typeof import("element-plus/es"))["ElIcon"];
+    HelloWorld: (typeof import("./../components/HelloWorld.vue"))["default"];
+    SvgIcon: (typeof import("./../components/SvgIcon/index.vue"))["default"];
   }
 }

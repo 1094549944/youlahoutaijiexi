@@ -52,14 +52,17 @@ const symbolId = computed(() => `#${props.prefix}-${props.iconClass}`);
   outline: none;
   fill: currentcolor; /* 定义元素的颜色，currentColor是一个变量，这个变量的值就表示当前元素的color值，如果当前元素未设置color值，则从父元素继承 */
 }
+
 .svg-icon-spin {
   animation: loadingCircle 1s infinite linear;
 }
+
 /* 旋转动画 */
 @keyframes loadingCircle {
   0% {
     transform: rotate(0);
   }
+
   100% {
     transform: rotate(360deg);
   }
