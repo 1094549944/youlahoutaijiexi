@@ -4,6 +4,7 @@ import variables from "@/styles/variables.module.scss";
 defineProps<{ msg: string }>();
 
 const count = ref(0);
+const { pkg } = __APP_INFO__;
 </script>
 
 <template>
@@ -31,6 +32,7 @@ const count = ref(0);
     <button class="bg-blue w-80 h-10 ml-10 m-1">button</button>
     <hr />
     <div class="animate__animated animate__bounce">An animated element</div>
+    <hr />
   </div>
 </template>
 
