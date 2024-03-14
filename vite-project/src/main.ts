@@ -10,6 +10,8 @@ import "@/styles/index.scss";
 const app = createApp(App);
 // 引入uno.css
 import "uno.css";
+// 进入动画
+import "animate.css";
 // 全局注册Element-plus图标
 setupElIcons(app);
 app.mount("#app");

@@ -29,6 +29,8 @@ const count = ref(0);
     </div>
     <hr />
     <button class="bg-blue w-80 h-10 ml-10 m-1">button</button>
+    <hr />
+    <div class="animate__animated animate__bounce">An animated element</div>
   </div>
 </template>
 
