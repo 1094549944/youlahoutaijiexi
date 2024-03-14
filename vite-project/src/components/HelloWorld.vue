@@ -27,6 +27,8 @@ const count = ref(0);
     <div :style="{ 'background-color': variables['bgColor'] }">
       测试全局使用
     </div>
+    <hr />
+    <button class="bg-blue w-80 h-10 ml-10 m-1">button</button>
   </div>
 </template>
 

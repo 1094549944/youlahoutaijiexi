@@ -8,6 +8,8 @@ import "virtual:svg-icons-register";
 // 引入样式
 import "@/styles/index.scss";
 const app = createApp(App);
+// 引入uno.css
+import "uno.css";
 // 全局注册Element-plus图标
 setupElIcons(app);
 app.mount("#app");

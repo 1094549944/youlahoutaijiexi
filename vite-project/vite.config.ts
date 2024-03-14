@@ -8,15 +8,14 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
-
 // 引入svg
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
-
 // 引入路径
 import { resolve } from "path";
-
 // 指定路径 使用 @ 代替/src
 const pathSrc = resolve(__dirname, "src");
+// 引入unocss
+import UnoCSS from "unocss/vite";
 
 // https://vitejs.dev/config/
 
@@ -63,6 +62,9 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         // Specify symbolId format
         // symbolId
         symbolId: "icon-[dir]-[name]",
+      }),
+      UnoCSS({
+        /* options */
       }),
     ],
     // vite.config.ts
